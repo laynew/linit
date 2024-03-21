@@ -10,17 +10,29 @@ apt update
 apt upgrade -y
 apt install -y \
     build-essential \
+    dh-autoreconf \
     libexif-dev \
     libimlib2-dev \
     libx11-dev \
+    libxcb-image0-dev \
+    libxcb-util-dev \
     libxft-dev \
     libxinerama-dev \
     xcompmgr \
     xorg \
     xinit \
     btop \
+    figlet \
     git \
+    gpg \
     htop \
+    imagemagick \
+    keepassxc \
+    neofetch \
+    pass \
+    shellcheck \
+    syncthing \
+    tldr \
     tmux \
     vim
 
