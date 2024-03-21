@@ -23,6 +23,7 @@ apt install -y \
     xinit \
     btop \
     figlet \
+    firefox \
     git \
     gpg \
     htop \
