@@ -43,12 +43,12 @@ apt install -y \
 default_user=$(id -nu 1000);
 default_user_home=$(grep :1000: /etc/passwd | cut -d: -f6)
 
-mkdir -p $default_user_home/.config/suckless
-cd $default_user_home/.config/suckless
+mkdir -p "$default_user_home/.config/suckless"
+cd "$default_user_home/.config/suckless" || echo "Could not cd to default user home dir && exit 1"
 
-chown -R 1000:1000 $default_user_home/.config/
+chown -R 1000:1000 "$default_user_home/.config/"
 
-su -p $default_user <<'EOF'
+su -p "$default_user" <<'EOF'
 for app in "dwm" "st" "dmenu" "sxiv"; do
     git clone "https://github.com/laynew/$app"
     pushd $app
@@ -65,8 +65,8 @@ popd
 EOF
 
 for app in "dwm" "st" "dmenu" "sxiv" "xwallpaper"; do
-    pushd $app
+    pushd "$app" || exit
     make install
-    popd
+    popd || echo "Popd failed for $app" || exit
 done
 
