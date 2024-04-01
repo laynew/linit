@@ -22,6 +22,7 @@ apt install -y \
     xcompmgr \
     xorg \
     xinit \
+    xinput \
     btop \
     entr \
     figlet \
