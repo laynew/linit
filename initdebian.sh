@@ -19,7 +19,9 @@ apt install -y \
     libxcb-util-dev \
     libxft-dev \
     libxinerama-dev \
+    xcape \
     xcompmgr \
+    xdotool \
     xorg \
     xinit \
     xinput \
